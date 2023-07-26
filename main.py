@@ -3,7 +3,6 @@ Aplikasi deteksi gempa terkini
 Modularisasi dengan function
 """
 
-
 def ekstraksi_data():
     """
     Tanggal: 25 Juli 2023
@@ -17,25 +16,27 @@ def ekstraksi_data():
     :return:
     """
     hasil = dict()
-    hasil['tanggal'] = '25 Juli 2023'
-    hasil['waktu'] = '07:25:12 WIB'
-    hasil['kedalaman'] = '75 Km'
-    hasil['lokasi'] = {'LS': 9.26, 'BT': 123.95}
-    hasil['pusat'] = 'berada dilaut 74 km BaratLaut TimorTengah Utara'
-    hasil['dirasakan'] = '(Skala MMI): II-III Alor, II-III Maumere, III Lembata, II-III Larantuka, II-III Waingapu'
+    hasil["tanggal"] = "25 Juli 2023"
+    hasil["waktu"] = "07:25:12 WIB"
+    hasil["kedalaman"] = "75 Km"
+    hasil["lokasi"] = {"LS": 9.26, "BT": 123.95}
+    hasil["pusat"] = "berada dilaut 74 km BaratLaut TimorTengah Utara"
+    hasil[
+        "dirasakan"
+    ] = "(Skala MMI): II-III Alor, II-III Maumere, III Lembata, II-III Larantuka, II-III Waingapu"
     print(hasil)
     return hasil
 
 
 def tampilkan_data():
-    print('Gempa Terakhir Yang Terjadi Menurut Laporan BMKG')
+    print("Gempa Terakhir Yang Terjadi Menurut Laporan BMKG")
     print(f"Tanngal {result['tanggal']}")
     print(f"Waktu {result['waktu']}")
     print(f"Kedalaman {result['kedalaman']}")
     print(f"Lokasi LS={result['lokasi']['LS']}, BT={result['lokasi']['BT']}")
 
 
-if __name__ == '__main__':
-    print('Aplikasi Utama')
+if __name__ == "__main__":
+    print("Aplikasi Utama")
     result = ekstraksi_data()
     tampilkan_data()
